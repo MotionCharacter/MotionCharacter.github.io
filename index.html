@@ -21,6 +21,8 @@
 
     gtag('config', 'G-PYVRSFMDRL');
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -195,24 +197,25 @@
                   
               <div class="content has-text-justified">
                 <p>
-                  Overview of our proposed model architecture for identity-preserving and motion-controlled human video generation. 
-                  The architecture consists of two primary components: the ID-Preserving Module and the Motion Control Module.
-                  The ID-Preserving Module ensures identity consistency in the generated video by focusing on identity-specific regions 
-                  within the cross-attention layers, guided by an identity embedding $C_{id}$ derived from a reference ID image.  
+                  Recent advancements in personalized Text-to-Video (T2V) generation highlight the importance of integrating 
+                  character-specific identities and actions. However, previous T2V models struggle with identity consistency 
+                  and controllable motion dynamics, mainly due to limited fine-grained facial and action-based textual prompts 
+                  and datasets that overlook key human attributes and actions. 
                 </p>
                 <p>
-                  The Motion Control Module enables fine-grained adjustment of motion intensity $\mathcal{M}$ according to 
-                  user-specified prompts and action phrases. $\mathcal{M}$ is computed from optical flow during training, 
-                  while in inference, it enables users to specify and control the intensity of action phrases.
+                  To address these challenges, we introduce <i>MotionCharacter</i>, a human video generation framework 
+                  designed for identity preservation and fine-grained motion control. 
+                  Our approach introduces a motion control module that prioritizes action-related text while ensuring scene consistency, 
+                  alongside Human-Motion, a new dataset utilizing large language models (LLMs) for detailed motion descriptions. 
                 </p>
                 <p>
-                  The training process incorporates a Motion-Weighted Loss, which emphasizes fidelity in high-motion areas, 
-                  and an ID-Consistency Loss to maintain alignment between the generated video and the reference ID image.
-                  During training, frames are encoded into the latent space via a Variational Autoencoder (VAE), processed with 
-                  the proposed losses, and decoded to produce the final video output. In the Inference phase, the model accepts 
-                  an input reference ID image, text prompt, action phrase, and motion intensity to guide the generated video.
+                  To streamline user control during inference, we parameterize motion intensity with a single coefficient, \( \mathcal{M} \). 
+                  Furthermore, we combine ID and CLIP embeddings to maintain identity fidelity while enabling dynamic attribute adjustments 
+                  and integrate mask and identity loss mechanisms to enhance consistency and detail fidelity. Extensive experiments validate 
+                  MotionCharacter's effectiveness, demonstrating significant improvements in identity-preserving, high-quality video generation.
                 </p>
               </div>
+              
             </div>
           </div>
           <!--/ Model Architecture Overview. -->
@@ -220,25 +223,34 @@
         </div>
       </div>
     </section>
-    
 
-    <!-- Paper video. -->
+
+    <!-- Qualitative Comparisons -->
     <div class="column">
       <h2 class="title is-3 has-text-centered">Qualitative Comparisons</h2>
-      <div class="columns is-centered">
-        <div class="column content has-text-centered">
-          <p>
-            Qualitative Comparisons.
-          </p>
-          <figure>
-            <img src="./static/images/comparison_Sitting in the sunlight, the elderly woman smiles softly, savoring the warmth around her..gif" alt="Matting GIF" style="width: 100%; border-radius: 0;">
-            <figcaption>Figure: This GIF demonstrates the matting results from our method.</figcaption>
-          </figure>
+      <div class="content has-text-centered">
+        <p>Qualitative Comparisons.</p>
+        <br>
+
+        <!-- Container for GIF and Labels -->
+        <div style="position: relative; display: inline-block; width: 100%;">
+
+          <!-- Method Names -->
+          <div style="display: flex; justify-content: space-between; position: absolute; top: -1.5rem; width: 100%;">
+            <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif;">IPA-PlusFace</span>
+            <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif;">IPA-FaceID-Portrait</span>
+            <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif;">IPA-FaceID-PlusV2</span>
+            <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif;">ID-Animator</span>
+            <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif;">Ours</span>
+          </div>
+          
+          
+          <!-- GIF -->
+          <img src="./static/images/comparison_Sitting in the sunlight, the elderly woman smiles softly, savoring the warmth around her..gif" alt="Matting GIF" style="width: 100%; border-radius: 0;">
+          <figcaption>Figure: This GIF demonstrates the matting results from our method.</figcaption>
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
-
 
     <!-- Paper video. -->
     <div class="column">

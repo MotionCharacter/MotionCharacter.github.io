@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+        content="MotionCharacter: Identity-Preserving and Motion Controllable Human Video Generation.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>MotionCharacter: Identity-Preserving and Motion Controllable Human Video Generation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -175,56 +175,109 @@
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <section class="section">
+      <div class="container is-max-desktop">
+    
+        <div class="columns is-centered">
+          <!-- Model Architecture Overview. -->
+          <div class="columns is-centered">
+            <div class="column is-full-width has-text-centered">
+              <h2 class="title is-3">Overview</h2>
+            
+              <!-- Inserted Image -->
+              <div class="content has-text-centered">
+                <figure>
+                  <img src="./static/images/motioncharacter.png" alt="Proposed Model Architecture" style="width: 100%;">
+                  <figcaption>Figure: Overview of the proposed model architecture.</figcaption>
+                </figure>
+              </div>
+              <!--/ Inserted Image -->
+                  
+              <div class="content has-text-justified">
+                <p>
+                  Overview of our proposed model architecture for identity-preserving and motion-controlled human video generation. 
+                  The architecture consists of two primary components: the ID-Preserving Module and the Motion Control Module.
+                  The ID-Preserving Module ensures identity consistency in the generated video by focusing on identity-specific regions 
+                  within the cross-attention layers, guided by an identity embedding $C_{id}$ derived from a reference ID image.  
+                </p>
+                <p>
+                  The Motion Control Module enables fine-grained adjustment of motion intensity $\mathcal{M}$ according to 
+                  user-specified prompts and action phrases. $\mathcal{M}$ is computed from optical flow during training, 
+                  while in inference, it enables users to specify and control the intensity of action phrases.
+                </p>
+                <p>
+                  The training process incorporates a Motion-Weighted Loss, which emphasizes fidelity in high-motion areas, 
+                  and an ID-Consistency Loss to maintain alignment between the generated video and the reference ID image.
+                  During training, frames are encoded into the latent space via a Variational Autoencoder (VAE), processed with 
+                  the proposed losses, and decoded to produce the final video output. In the Inference phase, the model accepts 
+                  an input reference ID image, text prompt, action phrase, and motion intensity to guide the generated video.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--/ Model Architecture Overview. -->
+    
         </div>
       </div>
-    </div> -->
-    <!--/ Paper video. -->
-  </div>
-</section>
+    </section>
+    
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-    <!-- Model Architecture Overview. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width has-text-centered">
-        <h2 class="title is-3">Overview</h2>
-        <div class="content has-text-justified">
+    <!-- Paper video. -->
+    <div class="column">
+      <h2 class="title is-3 has-text-centered">Qualitative Comparisons</h2>
+      <div class="columns is-centered">
+        <div class="column content has-text-centered">
           <p>
-            Overview of our proposed model architecture for identity-preserving and motion-controlled human video generation. 
-            The architecture consists of two primary components: the ID-Preserving Module and the Motion Control Module.
-            The ID-Preserving Module ensures identity consistency in the generated video by focusing on identity-specific regions 
-            within the cross-attention layers, guided by an identity embedding $C_{id}$ derived from a reference ID image.  
+            Qualitative Comparisons.
           </p>
-          <p>
-            The Motion Control Module enables fine-grained adjustment of motion intensity $\mathcal{M}$ according to 
-            user-specified prompts and action phrases. $\mathcal{M}$ is computed from optical flow during training, 
-            while in inference, it enables users to specify and control the intensity of action phrases.
-          </p>
-          <p>
-            The training process incorporates a Motion-Weighted Loss, which emphasizes fidelity in high-motion areas, 
-            and an ID-Consistency Loss to maintain alignment between the generated video and the reference ID image.
-            During training, frames are encoded into the latent space via a Variational Autoencoder (VAE), processed with 
-            the proposed losses, and decoded to produce the final video output. In the Inference phase, the model accepts 
-            an input reference ID image, text prompt, action phrase, and motion intensity to guide the generated video.
-          </p>
+          <figure>
+            <img src="./static/images/comparison_Sitting in the sunlight, the elderly woman smiles softly, savoring the warmth around her..gif" alt="Matting GIF" style="width: 100%; border-radius: 0;">
+            <figcaption>Figure: This GIF demonstrates the matting results from our method.</figcaption>
+          </figure>
         </div>
       </div>
     </div>
-    <!--/ Model Architecture Overview. -->
+    <!--/ Paper video. -->
 
+
+    <!-- Paper video. -->
+    <div class="column">
+      <h2 class="title is-3 has-text-centered">Motion Intensity Control</h2>
+      <div class="columns is-centered">
+        <div class="column content has-text-centered">
+          <p>
+            Motion Intensity Control.
+          </p>
+          <figure>
+            <img src="./static/images/comparison_Sitting in the sunlight, the elderly woman smiles softly, savoring the warmth around her..gif" alt="Matting GIF" style="width: 100%; border-radius: 0;">
+            <figcaption>Figure: This GIF demonstrates the matting results from our method.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+    <!-- Paper video. -->
+    <div class="column">
+      <h2 class="title is-3 has-text-centered">Action Phrase Control</h2>
+      <div class="columns is-centered">
+        <div class="column content has-text-centered">
+          <p>
+            Action Phrase Control.
+          </p>
+          <figure>
+            <img src="./static/images/comparison_Sitting in the sunlight, the elderly woman smiles softly, savoring the warmth around her..gif" alt="Matting GIF" style="width: 100%; border-radius: 0;">
+            <figcaption>Figure: This GIF demonstrates the matting results from our method.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
 
   </div>
 </section>
+
+
 
 
 <!-- <section class="section" id="BibTeX">

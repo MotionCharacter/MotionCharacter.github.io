@@ -23,6 +23,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+  <link rel="stylesheet" href="./static/styles.css">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -44,45 +45,6 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav> -->
 
 
 <section class="hero">
@@ -91,33 +53,6 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">MotionCharacter: Identity-Preserving and Motion Controllable Human Video Generation</h1>
-<!--           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
-          </div> -->
-
-<!--           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
-          </div> -->
-
           </div> 
         </div>
       </div>
@@ -126,14 +61,75 @@
 </section>
 
 
+
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body has-text-centered">
-      <img src="./static/images/comparison_Sitting in the sunlight, the elderly woman smiles softly, savoring the warmth around her..gif" alt="Teaser GIF" style="height: 100%;">
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">We propose MotionCharacter, a human video generation framework specifically designed for identity preservation and fine-grained motion control.
-        free-viewpoint
-        portraits.
+    <!-- White Rounded Box -->
+    <div style="background-color: #f9f9f9; border-radius: 15px; padding: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+      <!-- Single Row with Reference Images and GIFs -->
+      <div class="hero-body gif-container" style="display: flex; justify-content: center; align-items: flex-start; gap: 40px;">
+        
+        <!-- First Reference Image and GIFs -->
+        <div style="text-align: center;">
+          <div style="display: flex; align-items: flex-start; gap: 20px;">
+            <!-- Reference Image -->
+            <div style="text-align: center;">
+              <img src=".\static\images\jackie.jpg" alt="Reference Image" style="height: 150px; object-fit: contain;">
+              <div style="font-size: 10px; font-weight: bold; margin-top: 10px; white-space: nowrap;">"open mouth"</div>
+            </div>          
+            <!-- GIFs -->
+            <div style="display: flex; gap: 20px;">
+              <!-- First GIF -->
+              <div class="gif-item" style="text-align: center;">
+                <div class="gif-title" style="font-size: 16px; font-weight: bold;">Intensity: 10</div>
+                <img src=".\static\gif\A nature-loving hiker with a majestic mountain in the background takes a deep, refreshing breath.-open mouth-0-4993.gif" alt="First GIF" style="width: 300px;">
+              </div>
+              <!-- Second GIF -->
+              <div class="gif-item" style="text-align: center;">
+                <div class="gif-title" style="font-size: 16px; font-weight: bold;">Intensity: 20</div>
+                <img src=".\static\gif\A nature-loving hiker with a majestic mountain in the background takes a deep, refreshing breath.-open mouth-20-4993.gif" alt="Second GIF" style="width: 300px;">
+              </div>
+            </div>
+          </div>
+          <!-- Explanatory Text -->
+          <div style="text-align: center; font-size: 14px; margin-top: 10px;">
+            A nature-loving hiker with a majestic mountain in the background takes a deep, refreshing breath.
+          </div>
+        </div>
+
+        <!-- Second Reference Image and GIFs -->
+        <div style="text-align: center;">
+          <div style="display: flex; align-items: flex-start; gap: 20px;">
+            <!-- Reference Image -->
+            <div style="text-align: center;">
+              <img src=".\static\images\hinton.jpg" alt="Reference Image" style="height: 150px; object-fit: contain;">
+              <div style="font-size: 12px; font-weight: bold; margin-top: 10px; white-space: nowrap;">"smile"</div>
+            </div>      
+            <!-- GIFs -->
+            <div style="display: flex; gap: 20px;">
+              <!-- First GIF -->
+              <div class="gif-item" style="text-align: center;">
+                <div class="gif-title" style="font-size: 16px; font-weight: bold;">Intensity: 10</div>
+                <img src=".\static\gif\The girl at the flower stall carefully arranges a bright bouquet of roses, a gentle smile playing on her lips.-open mouth-0-4993.gif" alt="First GIF of Second Row" style="width: 300px;">
+              </div>
+              <!-- Second GIF -->
+              <div class="gif-item" style="text-align: center;">
+                <div class="gif-title" style="font-size: 16px; font-weight: bold;">Intensity: 20</div>
+                <img src=".\static\gif\The girl at the flower stall carefully arranges a bright bouquet of roses, a gentle smile playing on her lips.-open mouth-20-4993.gif" alt="Second GIF of Second Row" style="width: 300px;">
+              </div>
+            </div>
+          </div>
+          <!-- Explanatory Text -->
+          <div style="text-align: center; font-size: 14px; margin-top: 10px;">
+            The girl at the flower stall carefully arranges a bright bouquet of roses, a gentle smile playing on her lips.
+          </div>
+        </div>
+      </div>
+
+      <!-- Reduced margin for the subtitle -->
+      <h2 class="subtitle has-text-centered" style="margin-top: 10px; font-size: 16px;">
+        We propose <span style="font-weight: bold; color: red">MotionCharacter</span>, a human video generation framework specifically designed for identity preservation and fine-grained motion control.
       </h2>
     </div>
   </div>
@@ -142,40 +138,37 @@
 
 
 
-
-  <section class="section">
+<section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Recent advancements in personalized Text-to-Video (T2V) generation highlight the importance of integrating 
-            character-specific identities and actions. However, previous T2V models struggle with identity consistency 
-            and controllable motion dynamics, mainly due to limited fine-grained facial and action-based textual prompts 
-            and datasets that overlook key human attributes and actions. 
-          </p>
-          <p>
-            To address these challenges, we introduce <i>MotionCharacter</i>, a human video generation framework 
-            designed for identity preservation and fine-grained motion control. 
-            Our approach introduces a motion control module that prioritizes action-related text while ensuring scene consistency, 
-            alongside Human-Motion, a new dataset utilizing large language models (LLMs) for detailed motion descriptions. 
-          </p>
-          <p>
-          To streamline user control during inference, 
-            we parameterize motion intensity with a single coefficient. 
-            Furthermore, we combine ID and CLIP embeddings to maintain identity fidelity 
-            while enabling dynamic attribute adjustments and integrate mask 
-            and identity loss mechanisms to enhance consistency and detail fidelity. 
-            Extensive experiments validate MotionCharacter’s effectiveness, 
-            demonstrating significant improvements in identity-preserving, high-quality video generation.
-          
-          </p>
+        <div class="box" style="background-color: #f7f7f7; border-radius: 8px; padding: 20px;">
+          <!-- Gray rounded box -->
+          <div class="content has-text-justified">
+            Recent advancements in personalized Text-to-Video (T2V) generation highlight 
+            the importance of integrating character-specific identities and actions. 
+            However, previous T2V models struggle with identity consistency and controllable motion dynamics, 
+            mainly due to limited fine-grained facial and action-based textual prompts and datasets 
+            that overlook key human attributes and actions. To address these challenges, we propose <i>MotionCharacter</i>, 
+            an efficient and high-fidelity human video generation framework designed for identity preservation and fine-grained motion control. 
+            We introduce an ID-preserving module to maintain identity fidelity while allowing flexible attribute modifications, 
+            and further integrate ID-consistency and region-aware loss mechanisms, 
+            significantly enhancing identity consistency and detail fidelity. 
+            Additionally, our approach incorporates a motion control module that prioritizes action-related text 
+            while maintaining subject consistency, along with a dataset, Human-Motion, 
+            which utilizes large language models to generate detailed motion descriptions. 
+            To simplify user control during inference, we parameterize motion intensity through a single coefficient \( \lambda \), 
+            allowing for easy adjustments. Extensive experiments highlight the effectiveness of <i>MotionCharacter</i>, 
+            demonstrating significant improvements in ID-preserving, high-quality video generation. 
+          </div>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+
+
 
     <section class="section">
       <div class="container is-max-desktop">
@@ -190,30 +183,22 @@
               <div class="content has-text-centered">
                 <figure>
                   <img src="./static/images/motioncharacter.png" alt="Proposed Model Architecture" style="width: 100%;">
-                  <figcaption>Figure: Overview of the proposed model architecture.</figcaption>
+                  <!-- <figcaption>Framework overview. </figcaption> -->
                 </figure>
               </div>
               <!--/ Inserted Image -->
                   
               <div class="content has-text-justified">
-                <p>
-                  Recent advancements in personalized Text-to-Video (T2V) generation highlight the importance of integrating 
-                  character-specific identities and actions. However, previous T2V models struggle with identity consistency 
-                  and controllable motion dynamics, mainly due to limited fine-grained facial and action-based textual prompts 
-                  and datasets that overlook key human attributes and actions. 
-                </p>
-                <p>
-                  To address these challenges, we introduce <i>MotionCharacter</i>, a human video generation framework 
-                  designed for identity preservation and fine-grained motion control. 
-                  Our approach introduces a motion control module that prioritizes action-related text while ensuring scene consistency, 
-                  alongside Human-Motion, a new dataset utilizing large language models (LLMs) for detailed motion descriptions. 
-                </p>
-                <p>
-                  To streamline user control during inference, we parameterize motion intensity with a single coefficient, \( \mathcal{M} \). 
-                  Furthermore, we combine ID and CLIP embeddings to maintain identity fidelity while enabling dynamic attribute adjustments 
-                  and integrate mask and identity loss mechanisms to enhance consistency and detail fidelity. Extensive experiments validate 
-                  MotionCharacter's effectiveness, demonstrating significant improvements in identity-preserving, high-quality video generation.
-                </p>
+                Our proposed framework comprises three core components: 
+                the ID-Preserving Module, the Motion Control Module, and a composite loss function. 
+                The ID-Preserving Module ensures identity consistency by focusing on identity-specific 
+                regions within cross-attention layers, guided by an identity embedding \(C_{id}\) from a reference ID image. 
+                The Motion Control Module adjusts motion intensity \(\mathcal{M}\) based on user-specified prompts and action phrases.
+                The loss function incorporates a Region-Aware Loss to ensure high motion fidelity and 
+                an ID-Consistency Loss to maintain alignment with the reference ID image. 
+                During training, motion intensity is derived from optical flow. 
+                At inference, human animations are generated based on user-defined motion intensity 
+                and specified action phrases, enabling fine-grained and controllable video synthesis.
               </div>
               
             </div>
@@ -225,66 +210,480 @@
     </section>
 
 
-    <!-- Qualitative Comparisons -->
-    <div class="column">
-      <h2 class="title is-3 has-text-centered">Qualitative Comparisons</h2>
-      <div class="content has-text-centered">
-        <p>Qualitative Comparisons.</p>
-        <br>
+<!-- Qualitative Comparisons -->
+<div class="column">
+  <h2 class="title is-3 has-text-centered">Qualitative Comparisons</h2>
+  <div class="content" style="text-align: justify;">
+    <p>To further illustrate the effectiveness of our model, additional qualitative comparisons across various methods are provided.</p>
+    <br>
 
-        <!-- Container for GIF and Labels -->
-        <div style="position: relative; display: inline-block; width: 100%;">
+    <!-- Method Names (Aligned with GIF Start and End) -->
+    <div style="display: flex; margin-bottom: 20px; margin-left: 137px; width: calc(100% - 150px);">
+      <!-- Adjusted margin-left to align with GIFs -->
+      <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif; font-size: 12px; width: 20%;">IPA-PlusFace</span>
+      <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif; font-size: 12px; width: 20%;">IPA-FaceID-Portrait</span>
+      <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif; font-size: 12px; width: 20%;">IPA-FaceID-PlusV2</span>
+      <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif; font-size: 12px; width: 20%;">ID-Animator</span>
+      <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif; font-size: 12px; width: 20%;">Ours</span>
+    </div>
 
-          <!-- Method Names -->
-          <div style="display: flex; justify-content: space-between; position: absolute; top: -1.5rem; width: 100%;">
-            <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif;">IPA-PlusFace</span>
-            <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif;">IPA-FaceID-Portrait</span>
-            <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif;">IPA-FaceID-PlusV2</span>
-            <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif;">ID-Animator</span>
-            <span style="flex: 1; text-align: center; font-weight: bold; font-family: 'Georgia', serif;">Ours</span>
+    <!-- Container for Each GIF and Reference Image -->
+    <div style="display: flex; flex-direction: column; gap: 40px;">
+
+      <!-- Row 1 -->
+      <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <!-- Reference Image -->
+        <div style="text-align: center; margin-top: 0; width: 150px;">
+          <img src="./static/images/ID_style.png" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+        </div>
+
+        <!-- GIF (Single Image with All Methods) -->
+        <div style="flex-grow: 1;">
+          <img src="static\gif\comparison_A seasoned chef dressed in a white apron expertly seasons a delicious dish..gif" alt="Comparison GIF 1" style="width: 100%; border-radius: 0px;">
+          <figcaption style="text-align: center; margin-top: 5px;">A seasoned chef dressed in a white apron expertly seasons a delicious dish.</figcaption>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <!-- Reference Image -->
+        <div style="text-align: center; margin-top: 0; width: 150px;">
+          <img src=".\static\images\029_178_796_4k_phillip-zhang-mrw-5.jpg" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+        </div>
+
+        <!-- GIF (Single Image with All Methods) -->
+        <div style="flex-grow: 1;">
+          <img src=".\static\gif\comparison_A nostalgic grandmother gazes at old family photos, her face lighting up with memories..gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+          <figcaption style="text-align: center; margin-top: 5px;">A nostalgic <span style="font-weight: bold; color: red; text-decoration: underline;">grandmother</span> gazes at old family photos, her face lighting up with memories.</figcaption>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <!-- Reference Image -->
+        <div style="text-align: center; margin-top: 0; width: 150px;">
+          <img src="static\images\dilireba.jpg" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+        </div>
+
+        <!-- GIF (Single Image with All Methods) -->
+        <div style="flex-grow: 1;">
+          <img src="static\gif\comparison_A young man grins confidently, his eyes gleaming with excitement as he nods and gives a thumbs-up..gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+          <figcaption style="text-align: center; margin-top: 5px;">A young man grins confidently, his eyes gleaming with excitement as he nods and <span style="font-weight: bold; color: red; text-decoration: underline;">gives a thumbs-up</span>.</figcaption>
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+      <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <!-- Reference Image -->
+        <div style="text-align: center; margin-top: 0; width: 150px;">
+          <img src="static\images\hinton.jpg" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+        </div>
+
+        <!-- GIF (Single Image with All Methods) -->
+        <div style="flex-grow: 1;">
+          <img src="static\gif\comparison_Yawning loudly, the man stretches his arms above his head, eyes squeezed shut from the stretch..gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+          <figcaption style="text-align: center; margin-top: 5px;">Yawning loudly, the man stretches his arms above his head, eyes squeezed shut from the stretch.</figcaption>
+        </div>
+      </div>
+
+      <!-- Row 5 -->
+      <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <!-- Reference Image -->
+        <div style="text-align: center; margin-top: 0; width: 150px;">
+          <img src="static\images\lecun.png" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+        </div>
+
+        <!-- GIF (Single Image with All Methods) -->
+        <div style="flex-grow: 1;">
+          <img src="static\gif\comparison_An intellectual professor giving a lecture adjusts their glasses for a clearer view..gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+          <figcaption style="text-align: center; margin-top: 5px;">An intellectual professor giving a lecture adjusts their glasses for a clearer view.</figcaption>
+        </div>
+      </div>
+
+      <!-- Row 6 -->
+      <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <!-- Reference Image -->
+        <div style="text-align: center; margin-top: 0; width: 150px;">
+          <img src="static\images\Taylor.jpeg" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+        </div>
+
+        <!-- GIF (Single Image with All Methods) -->
+        <div style="flex-grow: 1;">
+          <img src="static\gif\comparison_Sitting in the sunlight, the elderly woman smiles softly, savoring the warmth around her. - 2.gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+          <figcaption style="text-align: center; margin-top: 5px;">Sitting in the sunlight, the elderly woman smiles softly, savoring the warmth around her.</figcaption>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Action Phrase Control -->
+<div class="column">
+  <h2 class="title is-3 has-text-centered">Action Phrase Control</h2>
+  <div class="content" style="text-align: justify;">
+    <p>To further explore the impact of action phrases on generated motion, we conducted experiments where we fixed the reference ID image, text prompt, and motion intensity, varying only the action phrase. This setup demonstrates how different action phrases influence specific motion details, enabling fine-grained control over generated actions.</p>
+    <br>
+
+    <!-- Container for Each GIF and Reference Image -->
+    <div style="display: flex; flex-direction: column; gap: 40px;">
+
+      <!-- Row 1 -->
+      <div style="position: relative;"> <!-- 设置相对定位 -->
+        <div style="display: flex; align-items: flex-start; gap: 20px;">
+          <!-- Reference Image -->
+          <div style="text-align: center; width: 150px; display: flex; flex-direction: column; justify-content: flex-start;">
+            <div style="margin-top: 32px;"> <!-- 调整参考图像向下移动 -->
+              <img src="static\images\029_178_796_4k_phillip-zhang-mrw-5.jpg" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+              <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+            </div>
           </div>
-          
-          
-          <!-- GIF -->
-          <img src="./static/images/comparison_Sitting in the sunlight, the elderly woman smiles softly, savoring the warmth around her..gif" alt="Matting GIF" style="width: 100%; border-radius: 0;">
-          <figcaption>Figure: This GIF demonstrates the matting results from our method.</figcaption>
-        </div>
-      </div>
-    </div>
 
-    <!-- Paper video. -->
-    <div class="column">
-      <h2 class="title is-3 has-text-centered">Motion Intensity Control</h2>
-      <div class="columns is-centered">
-        <div class="column content has-text-centered">
-          <p>
-            Motion Intensity Control.
-          </p>
-          <figure>
-            <img src="./static/images/comparison_Sitting in the sunlight, the elderly woman smiles softly, savoring the warmth around her..gif" alt="Matting GIF" style="width: 100%; border-radius: 0;">
-            <figcaption>Figure: This GIF demonstrates the matting results from our method.</figcaption>
-          </figure>
+          <!-- GIFs -->
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">""</div>
+            <img src="static\action_gif\looped_A nostalgic grandmother gazes at old family photos, her face lighting up with memories.--20-4993.gif" alt="Comparison GIF 1" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">"smile"</div>
+            <img src="static\action_gif\looped_A nostalgic grandmother gazes at old family photos, her face lighting up with memories.-smiling-20-4993.gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">"turn head"</div>
+            <img src="static\action_gif\looped_A nostalgic grandmother gazes at old family photos, her face lighting up with memories.-turn head-20-4993.gif" alt="Comparison GIF 3" style="width: 100%; border-radius: 0px;">
+          </div>
         </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
 
-    <!-- Paper video. -->
-    <div class="column">
-      <h2 class="title is-3 has-text-centered">Action Phrase Control</h2>
-      <div class="columns is-centered">
-        <div class="column content has-text-centered">
-          <p>
-            Action Phrase Control.
-          </p>
-          <figure>
-            <img src="./static/images/comparison_Sitting in the sunlight, the elderly woman smiles softly, savoring the warmth around her..gif" alt="Matting GIF" style="width: 100%; border-radius: 0;">
-            <figcaption>Figure: This GIF demonstrates the matting results from our method.</figcaption>
-          </figure>
+        <!-- Single Caption for the Entire Row -->
+        <figcaption style="
+          position: absolute;
+          left: 170px; /* 与左侧 GIF 的起始位置对齐 */
+          right: 20px; /* 与右侧 GIF 的终止位置对齐 */
+          text-align: center;
+          font-size: 14px;
+          margin-top: 10px;
+        ">
+          A nostalgic grandmother gazes at old family photos, her face lighting up with memories.
+        </figcaption>
+      </div>
+
+      <!-- Row 2 -->
+      <div style="position: relative;"> <!-- 设置相对定位 -->
+        <div style="display: flex; align-items: flex-start; gap: 20px;">
+          <!-- Reference Image -->
+          <div style="text-align: center; width: 150px; display: flex; flex-direction: column; justify-content: flex-start;">
+            <div style="margin-top: 32px;"> <!-- 调整参考图像向下移动 -->
+              <img src="static\images\Taylor.jpeg" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+              <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+            </div>
+          </div>
+
+          <!-- GIFs -->
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">"talk"</div>
+            <img src="static\action_gif\looped_A woman blows a kiss, her lips puckered and eyes winking playfully as she throws her head back slightly.--20-4993.gif" alt="Comparison GIF 1" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">"talk, close eyes"</div>
+            <img src="static\action_gif\looped_A woman blows a kiss, her lips puckered and eyes winking playfully as she throws her head back slightly.-eyes closed-20-4993.gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">"talk, hold a microphone"</div>
+            <img src="static\action_gif\looped_A woman blows a kiss, her lips puckered and eyes winking playfully as she throws her head back slightly.-holding microphone-20-4993.gif" alt="Comparison GIF 3" style="width: 100%; border-radius: 0px;">
+          </div>
+        </div>
+
+        <!-- Single Caption for the Entire Row -->
+        <figcaption style="
+          position: absolute;
+          left: 170px; /* 与左侧 GIF 的起始位置对齐 */
+          right: 20px; /* 与右侧 GIF 的终止位置对齐 */
+          text-align: center;
+          font-size: 14px;
+          margin-top: 10px;
+        ">
+          A woman blows a kiss, her lips puckered and eyes winking playfully as she throws her head back slightly.
+        </figcaption>
+      </div>
+
+      <!-- Row 3 -->
+      <div style="position: relative;"> <!-- 设置相对定位 -->
+        <div style="display: flex; align-items: flex-start; gap: 20px;">
+          <!-- Reference Image -->
+          <div style="text-align: center; width: 150px; display: flex; flex-direction: column; justify-content: flex-start;">
+            <div style="margin-top: 32px;"> <!-- 调整参考图像向下移动 -->
+              <img src="static\images\020_055_998_4k_randy-starfru1t-starzzastrogirlscan00044small35564636.jpg" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+              <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+            </div>
+          </div>
+
+          <!-- GIFs -->
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">""</div>
+            <img src="static\action_gif\looped_At the bustling market, the young man in a denim jacket carefully inspects a piece of fruit, looking for the perfect one.--20-4993.gif" alt="Comparison GIF 1" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">"open mouth"</div>
+            <img src="static\action_gif\looped_At the bustling market, the young man in a denim jacket carefully inspects a piece of fruit, looking for the perfect one.-open mouth-20-4993.gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">"smile"</div>
+            <img src="static\action_gif\looped_At the bustling market, the young man in a denim jacket carefully inspects a piece of fruit, looking for the perfect one.-smiling-20-4993.gif" alt="Comparison GIF 3" style="width: 100%; border-radius: 0px;">
+          </div>
+        </div>
+
+        <!-- Single Caption for the Entire Row -->
+        <figcaption style="
+          position: absolute;
+          left: 170px; /* 与左侧 GIF 的起始位置对齐 */
+          right: 20px; /* 与右侧 GIF 的终止位置对齐 */
+          text-align: center;
+          font-size: 14px;
+          margin-top: 10px;
+        ">
+          At the bustling market, the young man in a denim jacket carefully inspects a piece of fruit, looking for the perfect one.
+        </figcaption>
+      </div>
+      <br>
+
+
+      <!-- Row 4 -->
+      <div style="position: relative;"> <!-- 设置相对定位 -->
+        <div style="display: flex; align-items: flex-start; gap: 20px;">
+          <!-- Reference Image -->
+          <div style="text-align: center; width: 150px; display: flex; flex-direction: column; justify-content: flex-start;">
+            <div style="margin-top: 32px;"> <!-- 调整参考图像向下移动 -->
+              <img src="static\images\lecun.png" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+              <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+            </div>
+          </div>
+
+          <!-- GIFs -->
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">""</div>
+            <img src="static\action_gif\looped_Iron-Man-soars-through-the-4993-id-1500.ckpt-number-0-30.gif" alt="Comparison GIF 1" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">"open mouth"</div>
+            <img src="static\action_gif\looped_Iron-Man-soars-through-the-4993-id-1500.ckpt-number-0-open mouth-30.gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">"wink"</div>
+            <img src="static\action_gif\looped_Iron-Man-soars-through-the-4993-id-1500.ckpt-number-20-eyes winking-30.gif" alt="Comparison GIF 3" style="width: 100%; border-radius: 0px;">
+          </div>
+        </div>
+
+        <!-- Single Caption for the Entire Row -->
+        <figcaption style="
+          position: absolute;
+          left: 170px; /* 与左侧 GIF 的起始位置对齐 */
+          right: 20px; /* 与右侧 GIF 的终止位置对齐 */
+          text-align: center;
+          font-size: 14px;
+          margin-top: 10px;
+        ">
+          Iron Man soars through the clouds.
+        </figcaption>
+      </div>
+
+      <!-- Row 5 -->
+      <div style="position: relative;"> <!-- 设置相对定位 -->
+        <div style="display: flex; align-items: flex-start; gap: 20px;">
+          <!-- Reference Image -->
+          <div style="text-align: center; width: 150px; display: flex; flex-direction: column; justify-content: flex-start;">
+            <div style="margin-top: 32px;"> <!-- 调整参考图像向下移动 -->
+              <img src="static\images\ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+              <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+            </div>
+          </div>
+
+          <!-- GIFs -->
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">""</div>
+            <img src="static\action_gif\The woman’s face beams with pure happiness, her eyes sparkling.-frown-10-4993.gif" alt="Comparison GIF 1" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">"hold a microphone"</div>
+            <img src="static\action_gif\looped_The woman’s face beams with pure happiness, her eyes sparkling.-holding microphone-20-4993.gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">"wave hand"</div>
+            <img src="static\action_gif\looped_The woman’s face beams with pure happiness, her eyes sparkling.-wave hand-20-4993.gif" alt="Comparison GIF 3" style="width: 100%; border-radius: 0px;">
+          </div>
+        </div>
+
+        <!-- Single Caption for the Entire Row -->
+        <figcaption style="
+          position: absolute;
+          left: 170px; /* 与左侧 GIF 的起始位置对齐 */
+          right: 20px; /* 与右侧 GIF 的终止位置对齐 */
+          text-align: center;
+          font-size: 14px;
+          margin-top: 10px;
+        ">
+          The woman's face beams with pure happiness, her eyes sparkling.
+        </figcaption>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<br>
+<br>
+<!-- Motion Intensity Control -->
+<div class="column">
+  <h2 class="title is-3 has-text-centered">Motion Intensity Control</h2>
+  <div class="content" style="text-align: justify;">
+    <p>To analyze the impact of motion intensity adjustments, we conducted controlled experiments where we kept the reference ID image, text prompt, and action phrase fixed while varying only the motion intensity. This approach highlights how different intensity levels affect output quality and clarity, demonstrating the model's responsiveness to motion control parameters.</p>
+    <br>
+
+    <!-- Container for Each GIF and Reference Image -->
+    <div style="display: flex; flex-direction: column; gap: 40px;">
+
+      <!-- Row 1 -->
+      <div style="position: relative;"> <!-- 设置相对定位 -->
+        <div style="display: flex; align-items: flex-start; gap: 20px;">
+          <!-- Reference Image -->
+          <div style="text-align: center; width: 150px; display: flex; flex-direction: column; justify-content: flex-start; margin-top: 38px;">
+            <!-- 使用 margin-top 来让 ID 图像与 GIF 对齐 -->
+            <img src="static\images\ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+            <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+          </div>
+
+          <!-- Action Phrase -->
+          <div style="text-align: center; width: 150px; display: flex; flex-direction: column; justify-content: flex-start; margin-top: 38px;">
+            <!-- Action Phrase 的顶部也对齐 GIF -->
+            <div style="font-size: 16px; font-weight: bold;">Action Phrase:<br>"open mouth"</div>
+          </div>
+
+          <!-- GIFs -->
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Intensity: 5</div>
+            <img src="static\intensity_gif\2-A nature-loving hiker with a majestic mountain in the background takes a deep, refreshing breath.-open mouth-0-4993.gif" alt="Comparison GIF 1" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Intensity: 10</div>
+            <img src="static\intensity_gif\2-A nature-loving hiker with a majestic mountain in the background takes a deep, refreshing breath.-open mouth-10-4993.gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+          </div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+            <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Intensity: 20</div>
+            <img src="static\intensity_gif\2-A nature-loving hiker with a majestic mountain in the background takes a deep, refreshing breath.-open mouth-20-4993.gif" alt="Comparison GIF 3" style="width: 100%; border-radius: 0px;">
+          </div>
+        </div>
+
+        <!-- Single Caption for the Entire Row -->
+        <figcaption style="
+          position: absolute;
+          left: 330px; /* 与第一个 GIF 的起始位置对齐 */
+          width: calc(100% - 380px); /* 动态调整宽度，覆盖 GIF 区域 */
+          text-align: center;
+          font-size: 14px;
+          margin-top: 5px;
+        ">
+          A nature-loving hiker with a majestic mountain in the background takes a deep, refreshing breath.
+        </figcaption>
+      </div>
+      <br>
+
+
+
+    <!-- Row 2 -->
+    <div style="position: relative;"> <!-- 设置相对定位 -->
+      <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <!-- Reference Image -->
+        <div style="text-align: center; width: 150px; display: flex; flex-direction: column; justify-content: flex-start; margin-top: 38px;">
+          <img src="static\images\jimmy-fermin-bqe0J0b26RQ-unsplash.jpg" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+        </div>
+
+        <!-- Action Phrase -->
+        <div style="text-align: center; width: 150px; display: flex; flex-direction: column; justify-content: flex-start; margin-top: 38px;">
+          <div style="font-size: 16px; font-weight: bold;">Action Phrase:<br>"smile"</div>
+        </div>
+
+        <!-- GIFs -->
+        <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+          <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Intensity: 0</div>
+          <img src="static\intensity_gif\2-The girl at the flower stall carefully arranges a bright bouquet of roses, a gentle smile playing on her lips.-smiling-0-4993.gif" alt="Comparison GIF 1" style="width: 100%; border-radius: 0px;">
+        </div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+          <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Intensity: 10</div>
+          <img src="static\intensity_gif\2-The girl at the flower stall carefully arranges a bright bouquet of roses, a gentle smile playing on her lips.-smiling-10-4993.gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+        </div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+          <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Intensity: 20</div>
+          <img src="static\intensity_gif\2-The girl at the flower stall carefully arranges a bright bouquet of roses, a gentle smile playing on her lips.-smiling-20-4993.gif" alt="Comparison GIF 3" style="width: 100%; border-radius: 0px;">
         </div>
       </div>
+
+      <!-- Single Caption for the Entire Row -->
+      <figcaption style="
+        position: absolute;
+        left: 330px; /* 与第一个 GIF 的起始位置对齐 */
+        width: calc(100% - 380px); /* 动态调整宽度，覆盖 GIF 区域 */
+        text-align: center;
+        font-size: 14px;
+        margin-top: 5px;
+      ">
+        The girl at the flower stall carefully arranges a bright bouquet of roses, a gentle smile playing on her lips.
+      </figcaption>
     </div>
-    <!--/ Paper video. -->
+    <br>
+
+
+    <!-- Row 3 -->
+    <div style="position: relative;"> <!-- 设置相对定位 -->
+      <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <!-- Reference Image -->
+        <div style="text-align: center; width: 150px; display: flex; flex-direction: column; justify-content: flex-start; margin-top: 38px;">
+          <img src="static\images\020_055_998_4k_randy-starfru1t-starzzastrogirlscan00044small35564636.jpg" alt="Reference Image" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+          <div style="font-size: 14px; font-weight: bold; margin-top: 5px;">ID Image</div>
+        </div>
+
+        <!-- Action Phrase -->
+        <div style="text-align: center; width: 150px; display: flex; flex-direction: column; justify-content: flex-start; margin-top: 38px;">
+          <div style="font-size: 16px; font-weight: bold;">Action Phrase:<br>"open mouth"</div>
+        </div>
+
+        <!-- GIFs -->
+        <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+          <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Intensity: 5</div>
+          <img src="static\intensity_gif\3-At the bustling market, the young man in a denim jacket carefully inspects a piece of fruit, looking for the perfect one.-open mouth-0-4993 (2).gif" alt="Comparison GIF 1" style="width: 100%; border-radius: 0px;">
+        </div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+          <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Intensity: 10</div>
+          <img src="static\intensity_gif\3-At the bustling market, the young man in a denim jacket carefully inspects a piece of fruit, looking for the perfect one.-open mouth-10-4993 (1).gif" alt="Comparison GIF 2" style="width: 100%; border-radius: 0px;">
+        </div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center;">
+          <div class="gif-title" style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Intensity: 20</div>
+          <img src="static\intensity_gif\3-At the bustling market, the young man in a denim jacket carefully inspects a piece of fruit, looking for the perfect one.-open mouth-20-4993 (3).gif" alt="Comparison GIF 3" style="width: 100%; border-radius: 0px;">
+        </div>
+      </div>
+
+      <!-- Single Caption for the Entire Row -->
+      <figcaption style="
+        position: absolute;
+        left: 330px; /* 与第一个 GIF 的起始位置对齐 */
+        width: calc(100% - 380px); /* 动态调整宽度，覆盖 GIF 区域 */
+        text-align: center;
+        font-size: 14px;
+        margin-top: 5px;
+      ">
+        At the bustling market, the young man in a denim jacket carefully inspects a piece of fruit, looking for the perfect one.
+      </figcaption>
+    </div>
+    <br>
 
   </div>
 </section>

@@ -216,8 +216,11 @@
 
     .filter-image {
       position: absolute;
-      width: 40px;
+      width: 50px;
       height: auto;
+      top: 0%; /* 设置图像相对于父容器顶部的 0% */
+      left: 50%; /* 居中显示 */
+      transform: translateX(-50%); /* 确保水平居中 */
     }
 
     .normal-image {
@@ -552,7 +555,7 @@
                     <!-- Normal Video image -->
                     <img src="static/images/OcQC6ZzBQ_1_0000.jpg" alt="High-quality" class="normal-image" id="normal-img">
                     <!-- Trash bin -->
-                    <img src="static/images/trash_bin.svg" alt="Trash Bin" class="trash-bin" id="trash-bin">
+                    <img src="static/images/drop.svg" alt="Trash Bin" class="trash-bin" id="trash-bin">
                   </div>
                 </div>
               </div>
@@ -682,7 +685,7 @@
             }
 
             .filter-image {
-              width: 30px; /* Reduced size */
+              width: 60px; /* Reduced size */
             }
 
             .normal-image {
@@ -766,8 +769,8 @@
           
               const binRect = binElement.getBoundingClientRect();
               const imgRect = imgElement.getBoundingClientRect();
-              const deltaX = binRect.left - imgRect.left + 16;
-              const deltaY = binRect.top - imgRect.top + 5;
+              const deltaX = binRect.left - imgRect.left + 20;
+              const deltaY = binRect.top - imgRect.top - 20;
           
               tl.to(imgId, { x: deltaX, y: deltaY, duration: 1.5, ease: "power1.inOut" }, "-=0.8");
             });

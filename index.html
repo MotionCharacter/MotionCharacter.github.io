@@ -770,7 +770,7 @@
               const binRect = binElement.getBoundingClientRect();
               const imgRect = imgElement.getBoundingClientRect();
               const deltaX = binRect.left - imgRect.left + 13;
-              const deltaY = binRect.top - imgRect.top - 20;
+              const deltaY = binRect.top - imgRect.top + 10;
           
               tl.to(imgId, { x: deltaX, y: deltaY, duration: 1.5, ease: "power1.inOut" }, "-=0.8");
             });

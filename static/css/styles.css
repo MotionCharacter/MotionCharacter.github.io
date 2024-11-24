@@ -1,0 +1,32 @@
+/* styles.css 示例 */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.bbox {
+  background-color: #ffffff; /* Background color */
+  border-radius: 15px;       /* Rounded corners */
+  padding: 40px 100px;        /* Reduced top and bottom padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.33); /* Shadow effect */
+  margin: 0 auto 20px;       /* Centered alignment and bottom margin */
+  max-width: 1200px;         /* Fixed maximum width */
+  width: 100%;               /* Full width within container */
+  box-sizing: border-box;    /* Include padding in width/height */
+}
+
+
+
+/* 设置全局字体 */
+body {
+  font-family: 'Book Antiqua', serif; /* 替换为 Book Antiqua */
+  line-height: 1.75; /* 可选：调整全局行高 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 覆盖全局默认字体 */
+* {
+  font-family: 'Book Antiqua', serif; /* 确保所有元素使用 Book Antiqua */
+  box-sizing: border-box;
+}

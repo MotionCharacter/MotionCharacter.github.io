@@ -236,7 +236,7 @@
       position: absolute;
       width: 150px; /* Adjusted size */
       height: auto;
-      top: 60%; /* Center vertically */
+      top: 65%; /* Center vertically */
       left: 50%; /* Center horizontally */
       transform: translate(-50%, -50%); /* Translate to perfectly center */
       z-index: 2; /* Ensure it's above other elements */
@@ -544,7 +544,7 @@
 
               <!-- Step 2 -->
               <div class="step">
-                <div class="box" id="step2" style="height: 220px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div class="box" id="step2" style="height: 250px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                   <h2>2. Filtering</h2>
                   <div class="filtering-container">
                     <!-- Images to be discarded -->
@@ -600,7 +600,7 @@
 
               <!-- Step 5 -->
               <div class="step">
-                <div class="box" id="step5" style="height: 220px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div class="box" id="step5" style="height: 250px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                   <h3>5. Resampling</h3>
                   <p>Balanced motion intensity range: <br> [0-20]</p>
                 </div>
@@ -685,15 +685,15 @@
             }
 
             .filter-image {
-              width: 60px; /* Reduced size */
+              width: 55px; /* Reduced size */
             }
 
             .normal-image {
-              width: 50px; /* Reduced size */
+              width: 60px; /* Reduced size */
             }
 
             .trash-bin {
-              width: 100px; /* Reduced size */
+              width: 80px; /* Reduced size */
             }
 
             /* Adjust video size */
@@ -703,7 +703,7 @@
             }
 
             .optical-flow-gif {
-              max-width: 110px; /* Reduced size */
+              max-width: 130px; /* Reduced size */
             }
 
             /* Adjust font sizes */
@@ -769,7 +769,7 @@
           
               const binRect = binElement.getBoundingClientRect();
               const imgRect = imgElement.getBoundingClientRect();
-              const deltaX = binRect.left - imgRect.left + 20;
+              const deltaX = binRect.left - imgRect.left + 13;
               const deltaY = binRect.top - imgRect.top - 20;
           
               tl.to(imgId, { x: deltaX, y: deltaY, duration: 1.5, ease: "power1.inOut" }, "-=0.8");

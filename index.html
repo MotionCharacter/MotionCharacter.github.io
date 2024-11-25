@@ -158,7 +158,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 98%;
+      width: 100%;
       opacity: 0;
       display: flex;
       flex-direction: column;
@@ -769,8 +769,8 @@
           
               const binRect = binElement.getBoundingClientRect();
               const imgRect = imgElement.getBoundingClientRect();
-              const deltaX = binRect.left - imgRect.left + 13;
-              const deltaY = binRect.top - imgRect.top + 18;
+              const deltaX = binRect.left - imgRect.left+13;
+              const deltaY = binRect.top - imgRect.top-18;
           
               tl.to(imgId, { x: deltaX, y: deltaY, duration: 1.5, ease: "power1.inOut" }, "-=0.8");
             });

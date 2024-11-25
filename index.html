@@ -764,20 +764,26 @@
             ];
           
             filterImages.forEach((imgId) => {
-              const imgElement = document.querySelector(imgId);
-              const binElement = document.getElementById('trash-bin');
-          
-              const binRect = binElement.getBoundingClientRect();
-              const imgRect = imgElement.getBoundingClientRect();
-              const deltaX = binRect.left - imgRect.left+13;
-              const deltaY = binRect.top - imgRect.top-18;
-          
-              tl.to(imgId, { x: deltaX, y: deltaY, duration: 1.5, ease: "power1.inOut" }, "-=0.8");
-            });
-          
-            tl.to("#normal-img", { opacity: 1, duration: 0.5 }, "-=1");
-            tl.to("#normal-img", { x: 150, duration: 1.5, ease: "power1.inOut" });
-          
+            const imgElement = document.querySelector(imgId);
+            const binElement = document.getElementById('trash-bin');
+
+            // 获取元素相对于父元素的位置
+            const imgOffset = imgElement.getBoundingClientRect();
+            const binOffset = binElement.getBoundingClientRect();
+
+            // 确保使用相对坐标参考
+            const deltaX = binOffset.left - imgOffset.left + 14;
+            const deltaY = binOffset.top - imgOffset.top - 20;
+
+            // 应用动画
+            tl.to(imgElement, { 
+              x: deltaX, 
+              y: deltaY, 
+              duration: 1.5, 
+              ease: "power1.inOut" 
+            }, "-=0.8");
+          });
+
             // Arrow 2 Animation
             tl.add(() => {
               gsap.to("#arrow2", { opacity: 1, width: 30, duration: 1.5 });

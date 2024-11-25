@@ -764,26 +764,34 @@
             ];
           
             filterImages.forEach((imgId) => {
-            const imgElement = document.querySelector(imgId);
-            const binElement = document.getElementById('trash-bin');
+              const imgElement = document.querySelector(imgId);
+              const binElement = document.getElementById('trash-bin');
 
-            // 获取元素相对于父元素的位置
-            const imgOffset = imgElement.getBoundingClientRect();
-            const binOffset = binElement.getBoundingClientRect();
+              const binRect = binElement.getBoundingClientRect();
+              const imgRect = imgElement.getBoundingClientRect();
 
-            // 确保使用相对坐标参考
-            const deltaX = binOffset.left - imgOffset.left + 14;
-            const deltaY = binOffset.top - imgOffset.top - 20;
+              // 计算垃圾桶和图像的中心点坐标
+              const binCenterX = binRect.left + binRect.width / 2;
+              const binCenterY = binRect.top + binRect.height / 2;
 
-            // 应用动画
-            tl.to(imgElement, { 
-              x: deltaX, 
-              y: deltaY, 
-              duration: 1.5, 
-              ease: "power1.inOut" 
-            }, "-=0.8");
-          });
+              const imgCenterX = imgRect.left + imgRect.width / 2;
+              const imgCenterY = imgRect.top + imgRect.height / 2;
 
+              // 计算中心点之间的位移
+              const deltaX = binCenterX - imgCenterX;
+              const deltaY = binCenterY - imgCenterY;
+
+              // 计算30%的位移
+              const moveX = deltaX * 0.3;
+              const moveY = deltaY * 0.8;
+
+              tl.to(imgId, { x: moveX, y: moveY, duration: 1.5, ease: "power1.inOut" }, "-=0.8");
+            });
+
+          
+            tl.to("#normal-img", { opacity: 1, duration: 0.5 }, "-=1");
+            tl.to("#normal-img", { x: 150, duration: 1.5, ease: "power1.inOut" });
+          
             // Arrow 2 Animation
             tl.add(() => {
               gsap.to("#arrow2", { opacity: 1, width: 30, duration: 1.5 });

@@ -9,7 +9,7 @@ body {
   padding: 40px 100px;        /* Reduced top and bottom padding */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.33); /* Shadow effect */
   margin: 0 auto 20px;       /* Centered alignment and bottom margin */
-  max-width: 1400px;         /* Fixed maximum width */
+  max-width: 1200px;         /* Fixed maximum width */
   width: 100%;               /* Full width within container */
   box-sizing: border-box;    /* Include padding in width/height */
 }

@@ -391,20 +391,15 @@
       <div class="column">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          Recent advancements in personalized Text-to-Video (T2V) generation highlight the importance of integrating 
-          character-specific identities and actions. However, previous T2V models struggle with identity consistency 
-          and controllable motion dynamics, mainly due to limited fine-grained facial and action-based textual prompts 
-          and datasets that overlook key human attributes and actions. To address these challenges, 
-          we propose <strong>MotionCharacter</strong>, an efficient and high-fidelity human video generation framework designed 
-          for identity preservation and fine-grained motion control. 
-          We introduce an ID-preserving module to maintain identity fidelity while allowing flexible attribute modifications, 
-          and further integrate ID-consistency and region-aware loss mechanisms, significantly enhancing identity consistency 
-          and detail fidelity. 
-          Additionally, our approach incorporates a motion control module that prioritizes action-related text while 
-          maintaining subject consistency, along with a dataset, Human-Motion, which utilizes large language models to 
-          generate detailed motion descriptions. For simplify user control during inference, we parameterize motion intensity 
-          through a single coefficient, allowing for easy adjustments. Extensive experiments highlight the effectiveness 
-          of <strong>MotionCharacter</strong>, demonstrating significant improvements in ID-preserving, high-quality video generation. 
+          Recent advancements in personalized Text-to-Video (T2V) generation highlight the importance of integrating character-specific identities and actions. 
+          However, integrating the quantifiable intentions in human actions into personalized T2V generation models remains challenging. 
+          In this paper, we propose MotionCharacter, a high-fidelity human video generation framework designed for fine-grained motion control (i.e., precise control of both action type and intensity). 
+          The primary limitations of current models stem from several key challenges:  
+          (1) Due to the lack of fine-grained motion modeling, current subject-driven T2V models rely on coarse action descriptions that fail to precisely control the continuous nuances of motion intensity. 
+          To overcome this, we introduce a motion control module that decouples character motion into action type and motion intensity, enabling precise manipulation through text-driven control while ensuring controllable motion intensity. 
+          To further enhance motion dynamics, we also incorporate a region-aware loss mechanism that improves the quality of motion transitions. 
+          (2) Current methods struggle to preserve identity details when altering other attributes. Thus, we introduce an ID (identity) content insertion module to maintain identity fidelity while enabling flexible attribute modifications, 
+                    and incorporate an ID-consistency loss to enhance identity consistency and detail fidelity. (3) Existing datasets do not sufficiently capture the nuances of human motion and facial features. Accordingly, we curate a new dataset, Human-Motion, which uses LLMs to generate detailed descriptions of motion and facial features for training. Extensive experiments highlight the effectiveness of MotionCharacter, demonstrating significant improvements in fine-grained motion control and high-fidelity human video generation.   
         </div>
       </div>
     </div>

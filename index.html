@@ -423,23 +423,20 @@
           <!-- Inserted Image -->
           <div class="content has-text-centered">
             <figure>
-              <img src="./static/images/motioncharacter.png" alt="Proposed Model Architecture" style="width: 100%;">
+              <img src="./static/images/motioncharacter-1.png" alt="Proposed Model Architecture" style="width: 100%;">
               <!-- <figcaption>Framework overview. </figcaption> -->
             </figure>
           </div>
           <!--/ Inserted Image -->
               
           <div class="content has-text-justified">
-            Our proposed framework comprises three core components: 
-            the ID-Preserving Module, the Motion Control Module, and a composite loss function. 
-            The ID-Preserving Module ensures identity consistency by focusing on identity-specific 
-            regions within cross-attention layers, guided by an identity embedding \(C_{id}\) from a reference ID image. 
-            The Motion Control Module adjusts motion intensity \(\mathcal{M}\) based on user-specified prompts and action phrases.
-            The loss function incorporates a Region-Aware Loss to ensure high motion fidelity and 
-            an ID-Consistency Loss to maintain alignment with the reference ID image. 
-            During training, motion intensity is derived from optical flow. 
-            At inference, human animations are generated based on user-defined motion intensity 
-            and specified action phrases, enabling fine-grained and controllable video synthesis.
+     Framework overview. Our proposed framework comprises three core components: 
+            the ID Content Insertion Module, the Motion Control Module, and a composite loss function. 
+            The loss function incorporates a Region-Aware Loss to ensure high motion fidelity 
+            and an ID-Consistency Loss to maintain alignment with the reference ID image. 
+            During training, motion intensity \(\mathcal{M})\ is derived from optical flow. 
+            At inference, human animations are generated based on user-defined motion intensity \(\mathcal{M})\
+            and specified action phrases, enabling fine-grained and controllable video synthesis. 
           </div>
           
         </div>
